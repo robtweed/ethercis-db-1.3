@@ -6,7 +6,8 @@ This is based on and derived from the original
 [RippleOSI EtherCIS Database Docker Container](https://github.com/ethercis/ethercis-database-docker),
 but updated and patched for use with EtherCIS version 1.3
 
-This Docker Container must be used in conjunction with the ethercis-server-1.3 Container
+This Docker Container must be used in conjunction with the 
+[ethercis-server-1.3](https://github.com/robtweed/ethercis-server-1.3) Container
 
 Prebuilt docker images for both are available on the Docker Hub:
 
