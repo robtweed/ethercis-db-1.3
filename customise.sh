@@ -18,9 +18,18 @@ apk add bison
 
 apk add flex
 
+# Overwrite the pg_hba.conf connection configuration file with
+# the one in the repo
+
+mv /pg_hba.conf /var/lib/postgresql/pgdata
+
 echo 'now creating user root'
 su - postgres -c 'psql -c "CREATE USER root WITH SUPERUSER;"'
 echo 'created user root'
+
+# also add a password for the postgres user
+
+su - postgres -c $'psql -c "ALTER USER postgres PASSWORD \'postgres\';"'
 
 git clone https://github.com/postgrespro/jsquery.git
 cd jsquery
